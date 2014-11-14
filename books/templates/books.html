@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form type="get" action=".">
+    <input type="text" name="q">
+    <button type="submit">Search</button>
+</form>
+
+{% for book in books %}
+<h1>{{ book.title }}</h1>
+<p>
+    {{ book.body }}
+</p>
+{% endfor %}
+{% endblock %}
