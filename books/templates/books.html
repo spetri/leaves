@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
-  {% block content %}
+{% block content %}
   <form type="get" action=".">
     <input type="text" name="q">
     <button type="submit">Search</button>
   </form>
 
+  <h3>Your query has {{books.count}}{{highlighted_books.count}} result{{books|pluralize}}{{highlighted_books|pluralize}} </h3>
+
   {% for book in books %}
-    <h1>{{ book.title }}</h1>
+    <p>{{ book.title |safe }}</p>
       <p>
-        {{ book.body }}
+        {{ book.body |safe }}
       </p>
   {% endfor %}
-  
 {% endblock %}
