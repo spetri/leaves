@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 
-{% block content %}
-  <form type="get" action=".">
-    <input type="text" name="q">
-    <button type="submit">Search</button>
-  </form>
+{% block sidebar %}
+  <div class="search-window">
+    <div class="search-text">
+      <span class=>Search</span>
+      <span>here</span>
+    </div>
+    <form class="search-input" type="get" action=".">
+      <input type="text" name="q">
+      <button type="submit">SEARCH</button>
+    </form>
+  </div>
+{% endblock %}
 
-  <h3>Your query has {{books.count}}{{highlighted_books.count}} result{{books|pluralize}}{{highlighted_books|pluralize}} </h3>
-
+{% block results %}
   {% for book in books %}
     <p>{{ book.title |safe }}</p>
-      <p>
-        {{ book.body |safe }}
-      </p>
+    <p>{{ book.body |safe }}</p>
   {% endfor %}
 {% endblock %}

@@ -1,0 +1,56 @@
+em {
+  background-color: yellow;
+}
+
+.row {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#sidebar-view {
+  background-color: #131313;
+  height: 100%;
+}
+
+.search-window {
+  margin-top: 70px;
+}
+
+  .search-text {
+    text-align: center;
+  }
+
+  .search-text span:first-child {
+    font-size: 38px;
+    font-weight: 100;
+  }
+
+.search-input {
+  text-align: center;
+}
+
+  .search-input input {
+    font-size: 117%;
+  }
+
+  .search-input button {
+    background-color: #CE210F;
+    color: white;
+    border: 1px solid #131313;
+    border-radius: 3px;
+    font-weight: 400;
+    padding: 3% 15% 3% 15%;
+    margin: 3% 0 0 32%;
+  }
+
+#results-view {
+  height: 100%;
+}
+
+#docviewer-view {
+  height: 100%;
+  border-left: 1px solid black;
+}

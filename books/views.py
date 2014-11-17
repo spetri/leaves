@@ -6,19 +6,8 @@ from haystack.utils import Highlighter
 def books(request):
   data = request.GET
   form = BooksSearchForm(data)
+  highlighted_books = form.search().highlight()[0].highlighted
   if not data or data['q'] == '':
-    books = form.search()
-    highlighted_books = form.search().highlight()[0].highlighted
-    return render_to_response('books.html',
-      {
-        'books': books,
-      }
-    )
+    return render_to_response('books.html')
   else:
-    books = form.search()
-    highlighted_books = form.search().highlight()[0].highlighted
-    return render_to_response('books.html',
-      {
-        'books': highlighted_books,
-      }
-    )
+    return render_to_response('books.html', { 'books': highlighted_books })
