@@ -22,8 +22,6 @@ SECRET_KEY = '4v@1m3@f*top&wutpgvmrhkw-pu^jp!_7us=y8+!^!5deb8^s-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
@@ -39,7 +37,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'books',
     'haystack',
+    'template_debug',
 )
+
+TEMPLATE_DEBUG = True
 
 HAYSTACK_CONNECTIONS = {
     'default': {

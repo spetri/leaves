@@ -47,6 +47,7 @@ em {
   }
 
 #results-view {
+  overflow: scroll;
   height: 100%;
 }
 

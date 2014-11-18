@@ -14,8 +14,25 @@
 {% endblock %}
 
 {% block results %}
+
+<table class="table table-condensed table-striped">
+  <thead>
+    <tr>
+      <th>Book Title</th>
+      <th>Author</th>
+      <th>Passage</th>
+    </tr>
+  </thead>
+  <tbody>
   {% for book in books %}
-    <p>{{ book.title |safe }}</p>
-    <p>{{ book.body |safe }}</p>
+    {% for passage in highlighted %}
+      <tr>
+        <td>{{ book.title |safe }}</td>
+        <td>{{ book.author |safe }}</td>
+        <td>{{ passage |safe }}</td>
+      </tr>
+    {% endfor %}
   {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
