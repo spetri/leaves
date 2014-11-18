@@ -3,7 +3,7 @@
 {% block sidebar %}
   <div class="search-window">
     <div class="search-text">
-      <span class=>Search</span>
+      <span class>Search</span>
       <span>here</span>
     </div>
     <form class="search-input" type="get" action=".">
@@ -14,7 +14,9 @@
 {% endblock %}
 
 {% block results %}
-
+<div id="results-header">
+  <h1>Results</h1>
+</div>
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
@@ -35,4 +37,12 @@
   {% endfor %}
   </tbody>
 </table>
+{% endblock %}
+
+{% block docviewer %}
+<div>
+  <span></span>
+  <hr/>
+  <span></span>
+</div>
 {% endblock %}

@@ -1,6 +1,10 @@
-em {
-  background-color: yellow;
-}
+body { font-size: 12px; }
+em { background-color: yellow; }
+hr { width: 64%; }
+
+table td:first-child { width: 24%; }
+table td:nth-child(2) { width: 14%; }
+table td:nth-child(3) { width: 62%; }
 
 .row {
   position: fixed;
@@ -15,26 +19,18 @@ em {
   height: 100%;
 }
 
-.search-window {
-  margin-top: 70px;
-}
+.search-window { margin-top: 70px; }
 
-  .search-text {
-    text-align: center;
-  }
+  .search-text { text-align: center; }
 
   .search-text span:first-child {
     font-size: 38px;
     font-weight: 100;
   }
 
-.search-input {
-  text-align: center;
-}
+.search-input { text-align: center; }
 
-  .search-input input {
-    font-size: 117%;
-  }
+  .search-input input { font-size: 117%; }
 
   .search-input button {
     background-color: #CE210F;
@@ -46,12 +42,42 @@ em {
     margin: 3% 0 0 32%;
   }
 
+#results-header h1 {
+  font-size: 55px;
+  font-weight: 100;
+  color: #c5c5c5;
+}
+
 #results-view {
   overflow: scroll;
   height: 100%;
 }
 
+  #results-view .selected {
+    border: 2px solid gray;
+  }
+
 #docviewer-view {
   height: 100%;
   border-left: 1px solid black;
+  padding-left: 0;
 }
+
+  .docviewer-header {
+    background-color: #CE210F;
+    height: 20%;
+  }
+
+  .docviewer-title {
+    color: white;
+    font-size: 40px;
+    padding-left: 23px;
+  }
+
+  .docviewer-author {
+    float: right;
+    font-size: 27px;
+    font-weight: 100;
+    color: white;
+    padding-right: 20px;
+  }
