@@ -7,6 +7,7 @@ def books(request):
   data = request.GET
   form = BooksSearchForm(data)
   books = form.search()
+  print(request.GET['q'])
   highlighted_books = form.search().highlight()[0].highlighted
   if not data or data['q'] == '':
     return render_to_response('books.html')

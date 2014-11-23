@@ -1,6 +1,7 @@
-body { font-size: 12px; }
+body { 
+  font-size: 12px;
+}
 em { background-color: yellow; }
-hr { width: 64%; }
 
 table td:first-child { width: 24%; }
 table td:nth-child(2) { width: 14%; }
@@ -43,10 +44,91 @@ table td:nth-child(3) { width: 62%; }
   }
 
 #results-header h1 {
+  display: inline;
   font-size: 55px;
   font-weight: 100;
   color: #c5c5c5;
 }
+
+  #results-header .cards-type {
+    display: inline;
+  }
+
+.cards {
+  max-width: 100%;
+  font: 400 14px/12px "merriweather";
+}
+
+.cards .card {
+  max-width: 170px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  border-radius: 6px;
+  height: 209px;
+  display: inline-table;
+  position: relative;
+  margin-top: 5px;
+}
+
+  .cards .card hr:nth-child(2) {
+    color: white;
+    z-index: 100;
+    position: relative;
+    margin: 41% 0 0 0;
+    opacity: 0.4;
+  }
+
+  .cards .card hr:nth-child(5) {
+    color: white;
+    z-index: 100;
+    position: relative;
+    opacity: 0.4;    
+  }
+
+  .cards .card .overlay {
+    position: absolute;
+    border-radius: 6px;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .cards .card img {
+    position: absolute;
+    border-radius: 6px;
+    z-index: 50;
+  }
+
+  .cards .card .inner-card {
+    display: inline-table;
+    margin: 11px;
+  }
+
+  .cards .card .inner-card p:nth-child(1) {
+    color: white;
+    font-size: 9px;
+    position: absolute;
+    z-index: 100;
+    margin-top: 25%;
+  }
+
+  .cards .card .inner-card p:nth-child(4) {
+    color: lightgray;
+    z-index: 100;
+    position: relative;
+    font-size: 8px;
+  }
+
+  .cards .card .inner-card p:nth-child(3) {
+    color: white;
+    z-index: 100;
+    position: relative;
+    margin-top: 9%;
+    font-size: 12px;
+    font-weight: 100;
+  }
 
 #results-view {
   overflow: scroll;

@@ -1,0 +1,20 @@
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+  border-top: none;
+}
+
+.compact-table tbody {
+  font-weight: 100;
+  font-family: sans-serif;
+  color: #949494;
+  font-size: 13px;
+}
+
+  .compact-table tr td:first-child {
+    color: #383838;
+    vertical-align: middle;
+  }

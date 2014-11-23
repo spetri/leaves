@@ -16,9 +16,34 @@
 {% block results %}
 <div id="results-header">
   <h1>Results</h1>
+  <div class="cards-type">
+    <input type="button" class="btn btn-default" value="Cozy" onclick="cssChangeStyle('normal');" />
+    <input type="button" class="btn btn-default" value="Compact" onclick="cssChangeStyle('compact');" />
+  </div>
   <!--<span>Your query has {{highlighted.count}} result{{highlighted|pluralize}}</span>-->
 </div>
-<table class="table table-condensed table-striped">
+
+<hr/>
+
+<div class="cards">
+  {% for book in books %}
+    {% for passage in highlighted %}
+    <div class="card">
+      <div class="overlay"></div>
+      <img src="/static/zermatt.jpg" />
+      <div class="inner-card">
+        <p>{{book.author |safe }}</p>
+        <hr>
+        <p>{{book.title |safe }}</p>
+        <p>{{passage |safe }}</p>
+        <hr>
+      </div>
+    </div>
+    {% endfor %}
+  {% endfor %}
+</div>
+
+<table class="compact-table table table-condensed table-striped hide">
   <thead>
     <tr>
       <th>Book Title</th>
