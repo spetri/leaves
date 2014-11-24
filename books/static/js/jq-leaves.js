@@ -37,14 +37,15 @@ $(document).ready(function() {
   };
 
   function getTableInformation(row) {
-    var title = row.find("td:first-child").text();
-    var author = row.find("td:nth-child(2)").text();
+    var title = row.find($(".cards .card .inner-card p:nth-child(3)")).text();
+    var author = row.find($(".cards .card .inner-card p:nth-child(1)")).text();
     return {title: title, author: author};
   };
 
   function selectRow() {
-    if($(this).hasClass('selected')) {
-      $(this).removeClass('selected');
+    if($('.overlay').hasClass('selected')) {
+      $('.overlay').removeClass('selected');
+      $(this).addClass('selected');
     } else {
       $(this).addClass('selected');
       $(this).siblings().removeClass('selected');
@@ -52,6 +53,6 @@ $(document).ready(function() {
   };
 
 $('#results-view .cards .card').on("click", docViewerHeader);
-$('#results-view tr').on("click", selectRow);
+$('#results-view .overlay').on("click", selectRow);
 
 });
